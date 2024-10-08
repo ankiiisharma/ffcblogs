@@ -1,8 +1,8 @@
 import React from "react";
 import BlogCard from "../components/BlogCard";
 import Navbar from "../components/Navbar";
-import { useBlogs } from "../hooks";
 import BlogSkeleton from "../components/BlogSkeleton";
+import { useBlogs } from "../hooks";
 
 const Blogs: React.FC = () => {
   const { loading, blogs = [], error } = useBlogs();
@@ -42,7 +42,7 @@ const Blogs: React.FC = () => {
                 content={blog.content || "No content available"}
                 publishedDate={blog.publishedDate || "23 Sept 2024"}
                 imageUrl={blog.imageUrl || "https://c4.wallpaperflare.com/wallpaper/237/293/295/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg"}
-                author={blog.author}
+                author= {""}
               />
             ))
           )}

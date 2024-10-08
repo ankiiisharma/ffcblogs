@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export interface BlogCardProps {
   author: string;
-  id: string;
+  id: number;
   authorName: string;
   title: string;
   content: string;
