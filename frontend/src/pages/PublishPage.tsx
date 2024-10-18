@@ -10,12 +10,13 @@ const PublishPage = () => {
     
     const [title, setTitle] = useState<string>("");
     const [description, setDesciption] = useState<string>("");
+    const [imageUrl, setImageUrl] = useState<string>("");
 
     
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
     
-        const postData = { title, content:description };
+        const postData = { title, content:description, imageUrl };
         console.log(postData);
     
         try {
@@ -70,6 +71,17 @@ const PublishPage = () => {
                 setDesciption(e.target.value)
             }}
           />
+
+            <textarea
+            id="codeare"
+            className="w-full h-[420px] p-2 bg-grad02-gradient border border-slate-500 rounded-lg tracking-tight mt-2"
+            placeholder={"image Url"}
+            value={imageUrl}
+            onChange={(e)=>{
+                setImageUrl(e.target.value)
+            }}
+          />
+
           <div className="w-full flex items-center h-auto gap-3"> 
           <button
           className="bg-green-600 text-white px-[100px] rounded-md py-2"

@@ -6,7 +6,7 @@ const BlogSkeleton = () => {
         
         <div>
             <img
-              src={"https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"}
+              src={"https://ik.imagekit.io/ankiiisharma/imageloadingimages.png?updatedAt=1728408544775"}
               alt="Blog image"
               className="p-[1px] rounded-lg mb-3"
             />

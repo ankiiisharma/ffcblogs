@@ -26,6 +26,8 @@ export const useBlog = ({ id }: { id: string }) => {
                         Authorization: localStorage.getItem("token")
                     }
                 });
+
+                console.log(response.data.post);
                 setBlog(response.data.post);
                 setLoading(false);
 
@@ -35,7 +37,6 @@ export const useBlog = ({ id }: { id: string }) => {
                 setLoading(false);
             }
         };
-
         fetchBlog();
     }, [id]);
 

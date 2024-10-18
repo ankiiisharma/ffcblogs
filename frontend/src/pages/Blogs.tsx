@@ -41,7 +41,7 @@ const Blogs: React.FC = () => {
                 title={blog.title || "Untitled Blog"}
                 content={blog.content || "No content available"}
                 publishedDate={blog.publishedDate || "23 Sept 2024"}
-                imageUrl={blog.imageUrl || "https://c4.wallpaperflare.com/wallpaper/237/293/295/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg"}
+                imageUrl={blog.imageUrl || "https://dl.dir.freefiremobile.com/common/web_event/hash/54f31449f5f91cf0cc223cc635cd5952jpg"}
                 author= {""}
               />
             ))
