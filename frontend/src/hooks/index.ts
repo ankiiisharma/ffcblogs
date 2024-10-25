@@ -27,7 +27,8 @@ export const useBlog = ({ id }: { id: string }) => {
                     }
                 });
 
-                console.log(response.data.post);
+                const blogData = response.data.post;
+                console.log("Image URL:", blogData.imageUrl);
                 setBlog(response.data.post);
                 setLoading(false);
 

@@ -3,8 +3,7 @@ import  Signup  from './pages/Signup'
 import  Signin from './pages/Signin'
 import  Blog  from './pages/Blog'
 import Blogs from "./pages/Blogs"
-import PublishPage from './pages/PublishPage'
-import Footer from './components/Footer'
+import About from './pages/About'
 // import Home from './pages/Home'
 
 function App() {
@@ -18,9 +17,8 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:id" element={<Blog />} />
-          <Route path="/ffcadminpannel" element={<PublishPage />} />
+          <Route path="/aboutus" element={<About />} />
         </Routes>
-        <Footer />
     </>
   )
 }

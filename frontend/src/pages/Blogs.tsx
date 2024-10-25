@@ -3,6 +3,16 @@ import BlogCard from "../components/BlogCard";
 import Navbar from "../components/Navbar";
 import BlogSkeleton from "../components/BlogSkeleton";
 import { useBlogs } from "../hooks";
+import Footer from "../components/Footer";
+
+  function formatDate(isoDate: string) {
+    const date = new Date(isoDate);
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const year = date.getUTCFullYear();
+  
+    return `${day}/${month}/${year}`;
+  }
 
 const Blogs: React.FC = () => {
   const { loading, blogs = [], error } = useBlogs();
@@ -40,7 +50,7 @@ const Blogs: React.FC = () => {
                 authorName={blog.author?.name || "Unknown Author"}
                 title={blog.title || "Untitled Blog"}
                 content={blog.content || "No content available"}
-                publishedDate={blog.publishedDate || "23 Sept 2024"}
+                publishedDate={formatDate(blog.publishedDate) || "23 Sept 2024"}
                 imageUrl={blog.imageUrl || "https://dl.dir.freefiremobile.com/common/web_event/hash/54f31449f5f91cf0cc223cc635cd5952jpg"}
                 author= {""}
               />
@@ -48,6 +58,7 @@ const Blogs: React.FC = () => {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
